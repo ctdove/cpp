@@ -1,7 +1,8 @@
 #include "interface.h"
 
 int main () {
-    std::cout << "test" << std::endl;
-    clidraw cursor;
-    cursor.whitespace(5);
+    Clidraw::Grid grid;
+    grid.fill("@", 11);
+    std::cout << std::endl;
+    grid.dot("n", 1, 1);
 };
