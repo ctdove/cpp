@@ -40,14 +40,26 @@ int Clidraw::Grid::box(int x, int y, int width, int height) {
         std::cout << c;
     }
 } int Clidraw::Grid::rect(int x, int y, int width, int height) {
-    whitespace(x);
-    for (int i = 0; i < 0; i++) {
-
-    } for (size_t i = 0; i <= 0; i++) {
-        /* code */
-    } for (size_t i = 0; i <= 0; i++) {
-        /* code */
-    }
+    //Space out x
     
+    for (int i = 0; i <= y; i++) {
+        //space out y   
+        std::cout << std::endl;
+    } 
+
+    whitespace(x);
+    
+    for (int i = 0; i <= height; i++) {
+        // draw x
+        if (i == 0 || i == height) {
+            fill("--", width);
+            std::cout << std::endl;
+        } else if (i != 0 || i != height) {
+            std::cout << "|";
+            whitespace(2*(width - 1));
+            std::cout << "|";
+            std::cout << std::endl;
+        }
+    }
     return 0;
 }
