@@ -1,5 +1,7 @@
-FROM gitpod/workspace-full
-                    
+FROM gitpod/workspace-full-vnc
+RUN apt-get update \
+    && apt-get install -y libgtk-3-dev
+    
 USER gitpod
 
 # Install custom tools, runtime, etc. using apt-get
